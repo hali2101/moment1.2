@@ -1,0 +1,63 @@
+
+[
+      {
+      "courseid":      "DT057G",
+      "coursename":         "Webbutveckling I",
+      "progression":  "A",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=15472"
+    },
+    {
+      "courseid":      "DT093G",
+      "coursename":         "Webbutveckling II",
+      "progression":  "B",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=15474"
+    },
+    {
+      "courseid":      "DT173G",
+      "coursename":         "Webbutveckling III",
+      "progression":  "B",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=31475"
+    },
+    {
+      "courseid":      "DT084G",
+      "coursename":         "Introduktion till programmering i JavaScript",
+      "progression":  "A",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=30811"
+    },
+    {
+      "courseid":      "DT068G",
+      "coursename":         "Webbanvändbarhet",
+      "progression":  "B",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=30823"
+    },
+    {
+      "courseid":      "DT003G",
+      "coursename":         "Datateknik GR, Databaser",
+      "progression":  "A",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=21595"
+    },
+    {
+      "courseid":      "DT197G",
+      "coursename":         "Webbdesign för CMS",
+      "progression":  "B",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=31118"
+    },
+    {
+      "courseid":      "DT163G",
+      "coursename":         "Digital bildbehandling för webb",
+      "progression":  "A",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=24403"
+    },
+    {
+      "courseid":      "IK060G",
+      "coursename":         "Informatik GR, Projektledning",
+      "progression":  "A",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=31886"
+    },
+    {
+      "courseid":      "DT193G",
+      "coursename":         "Fullstack-utveckling med ramverk",
+      "progression":  "B",
+      "syllabus":     "http://www.miun.se/utbildning/kurser/sok-kursplan/kursplan?kursplanid=31728"
+    }
+  ]

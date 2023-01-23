@@ -1,0 +1,61 @@
+@page "/JSON"
+@inject HttpClient Http
+
+<h2>JSON</h2>
+
+@if (schedule == null)
+{
+    //kontroll om listan är tom
+    <p>Laddar in kurslistan... Var god vänta..</p>
+}
+else
+{
+
+    //tabell med lästa kurser
+    <div class="tableresp">
+    <table>
+        <thead>
+            <tr>
+                <th>Kurskod</th>
+                <th>Kursnamn</th>
+                <th>Progression</th>
+                <th>Kursplan</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in schedule)
+                {
+                    <tr>
+                        <td>@course.courseid</td>
+                        <td>@course.coursename</td>
+                        <td>@course.progression</td>
+                        <td><a href="@course.syllabus" target="_blank">Länk till kursplan</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code
+{
+    //skapar array för att lagra kurserna i
+    private Schedule[]? schedule;
+
+    //http-anrop för att hämta in kurslistan
+    protected override async Task OnInitializedAsync()
+    {
+        //väntar in http-anropet
+        schedule = await
+        Http.GetFromJsonAsync<Schedule[]>("./json/courses.json");
+    }
+
+    //modell för kurslistan
+    public class Schedule
+    {
+        public string? courseid { get; set; }
+        public string? coursename { get; set; }
+        public string? progression { get; set; }
+        public string? syllabus { get; set; }
+    }
+}

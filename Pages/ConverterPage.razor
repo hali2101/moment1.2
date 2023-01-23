@@ -1,0 +1,65 @@
+@page "/converter"
+
+<h2>Konverterare</h2>
+
+<h3>Här kan du konvertera meter till fot.</h3>
+
+<label for="meter">Ange meter:</label>
+<input type="number" @bind="meter">
+<br>
+<button class="btn" @onclick="Calculate">Konvertera</button>
+<p>Längden i fot är: @feet</p>
+
+<h3>Här kan du konvertera km/h till miles/hour.</h3>
+
+<label for="kilometers">Ange km/h:</label>
+<input type="number" @bind="kilometers">
+<br>
+<button class="btn" @onclick="Calculate">Konvertera</button>
+<p>Hastigheten i miles/hour är: @miles</p>
+
+@code
+{
+    //deklarera variabeln fot
+    private decimal? feet;
+    //deklarera variabeln meter
+    private double? meter;
+
+    //deklarera variabeln kilometer
+    private double? kilometers;
+    //deklarera variabeln miles
+    private int? miles;
+
+    //konverterare
+    private void Calculate()
+    {
+        //uträkning lagrad i variabel
+        var unroundedfeet = meter * 3.28;
+
+        //kontroll om värdet är null eller inte för att inte skriva ut 0 på sidan
+        if (unroundedfeet != null)
+        {
+            //konvertera till decimal för att runda av
+            feet = Convert.ToDecimal(unroundedfeet);
+        }
+        else
+        {
+            feet = null;
+        }
+
+        //uträkning lagrad i variabel
+        var unroundedmiles = kilometers * 0.6214;
+        //kontroll om värdet är null eller inte för att inte skriva ut 0 på sidan
+        if (unroundedmiles != null)
+        {
+            //konverterar till heltal
+            miles = Convert.ToInt32(unroundedmiles);
+        }
+        else
+        {
+            miles = null;
+        }
+
+
+    }
+}
